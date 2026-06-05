@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda WhatsApp</title>
+    <link rel="stylesheet" href="styles.css?v=20260507-colores-detalle" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Catalogo al detalle 2026</p>
+        <h1>Compra por WhatsApp</h1>
+      </div>
+      <div class="top-actions">
+        <button id="settingsBtn" class="ghost-btn admin-only" type="button" hidden>Configurar</button>
+        <button id="cartToggle" class="cart-btn" type="button">
+          Carrito <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="shop-tools" aria-label="Herramientas del catalogo">
+        <label class="search-box">
+          <span>Buscar</span>
+          <input id="searchInput" type="search" placeholder="Producto, categoria..." />
+        </label>
+        <div id="categoryTabs" class="tabs" role="tablist"></div>
+      </section>
+
+      <section class="summary-band">
+        <div>
+          <strong id="productTotal">50</strong>
+          <span>productos disponibles</span>
+        </div>
+        <div>
+          <strong>Detalle</strong>
+          <span>precios listos para venta final</span>
+        </div>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>pedido armado automaticamente</span>
+        </div>
+      </section>
+
+      <section class="color-guide" aria-label="Colores disponibles">
+        <div>
+          <p class="eyebrow">Colores disponibles</p>
+          <h2>Paleta al detalle</h2>
+        </div>
+        <div id="colorList" class="color-list"></div>
+      </section>
+
+      <section id="productGrid" class="product-grid" aria-live="polite"></section>
+    </main>
+
+    <aside id="cartDrawer" class="drawer" aria-label="Carrito">
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">Pedido</p>
+          <h2>Carrito</h2>
+        </div>
+        <button id="closeCart" class="icon-btn" type="button" aria-label="Cerrar carrito">x</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="totals">
+        <div>
+          <span>Productos</span>
+          <strong id="cartSubtotal">CRC 0</strong>
+        </div>
+        <div id="shippingRow">
+          <span>Envio</span>
+          <strong id="shippingTotal">CRC 0</strong>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">CRC 0</strong>
+        </div>
+      </div>
+
+      <button id="sendWhatsapp" class="primary-btn" type="button">Enviar al vendedor por WhatsApp</button>
+      <button id="clearCart" class="ghost-btn full" type="button">Vaciar carrito</button>
+    </aside>
+
+    <dialog id="orderDialog">
+      <form method="dialog" class="dialog-card order-dialog" id="orderForm">
+        <div class="drawer-head">
+          <div>
+            <p class="eyebrow">Datos finales</p>
+            <h2>Enviar pedido</h2>
+          </div>
+          <button class="icon-btn close-dialog" type="button" aria-label="Cerrar">x</button>
+        </div>
+
+        <label class="field">
+          <span>Nombre del cliente</span>
+          <input id="customerName" type="text" placeholder="Nombre completo" required />
+        </label>
+
+        <div class="checkout-options">
+          <label class="field">
+            <span>Entrega</span>
+            <select id="deliveryMethod">
+              <option value="pickup">Retiro o coordinar</option>
+              <option value="shipping">Envio por Correos de Costa Rica + CRC 3.000</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Metodo de pago</span>
+            <select id="paymentMethod">
+              <option value="sinpe">SINPE Movil</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="shipping-fields" id="shippingFields">
+          <div class="delivery-choice">
+            <label>
+              <input type="radio" name="correosDeliveryType" value="address" checked />
+              Domicilio
+            </label>
+            <label>
+              <input type="radio" name="correosDeliveryType" value="branch" />
+              Retiro en sucursal
+            </label>
+          </div>
+
+          <div class="checkout-options">
+            <label class="field">
+              <span>Provincia</span>
+              <select id="deliveryProvince">
+                <option value="">Seleccionar provincia</option>
+                <option>San Jose</option>
+                <option>Alajuela</option>
+                <option>Cartago</option>
+                <option>Heredia</option>
+                <option>Guanacaste</option>
+                <option>Puntarenas</option>
+                <option>Limon</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Canton</span>
+              <input id="deliveryCanton" type="text" placeholder="Ejemplo: Escazu" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Distrito</span>
+            <input id="deliveryDistrict" type="text" placeholder="Ejemplo: San Rafael" />
+          </label>
+
+          <label class="field" id="addressField">
+            <span>Direccion exacta</span>
+            <textarea id="deliveryAddress" rows="3" placeholder="Senas, puntos de referencia y cualquier detalle para ubicar la entrega"></textarea>
+          </label>
+
+          <label class="field" id="branchField">
+            <span>Sucursal de Correos</span>
+            <input id="deliveryBranch" type="text" placeholder="Ejemplo: Sucursal Zapote, Sucursal Escazu..." />
+          </label>
+
+          <p class="hint">Correos de Costa Rica indica que una direccion insuficiente puede causar devoluciones si faltan puntos de referencia, provincia, canton o distrito.</p>
+        </div>
+
+        <div id="sinpeBox" class="payment-note">
+          <strong>Pagar por SINPE</strong>
+          <span id="sinpeDisplay">SINPE: 72592308 a nombre de Yader Fernando Flores Lopez.</span>
+        </div>
+
+        <div class="totals order-totals">
+          <div>
+            <span>Productos</span>
+            <strong id="orderSubtotal">CRC 0</strong>
+          </div>
+          <div id="orderShippingRow">
+            <span>Envio</span>
+            <strong id="orderShippingTotal">CRC 0</strong>
+          </div>
+          <div class="cart-total">
+            <span>Total</span>
+            <strong id="orderTotal">CRC 0</strong>
+          </div>
+        </div>
+
+        <div class="payment-actions single">
+          <button class="primary-btn full" type="submit">Enviar por WhatsApp</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="imageDialog" class="image-dialog">
+      <button class="icon-btn close-dialog image-close" type="button" aria-label="Cerrar">x</button>
+      <img id="largeProductImage" src="" alt="" />
+      <strong id="largeProductName"></strong>
+    </dialog>
+
+    <dialog id="productDialog">
+      <form method="dialog" class="dialog-card" id="productForm">
+        <div class="drawer-head">
+          <div>
+            <p class="eyebrow">Editar producto</p>
+            <h2 id="dialogTitle">Producto</h2>
+          </div>
+        <button class="icon-btn close-dialog" type="button" aria-label="Cerrar">x</button>
+        </div>
+
+        <input type="hidden" id="editId" />
+        <label class="field">
+          <span>Nombre</span>
+          <input id="editName" type="text" required />
+        </label>
+        <label class="field">
+          <span>Categoria</span>
+          <input id="editCategory" type="text" required />
+        </label>
+        <label class="field">
+          <span>Precio detalle</span>
+          <input id="editPrice" type="number" min="0" step="1" required />
+        </label>
+        <label class="field">
+          <span>Tallas, separadas por coma</span>
+          <input id="editSizes" type="text" />
+        </label>
+        <label class="field">
+          <span>Colores, separados por coma</span>
+          <input id="editColors" type="text" />
+        </label>
+        <label class="field">
+          <span>Imagen actual o URL</span>
+          <input id="editImage" type="text" />
+        </label>
+        <label class="field">
+          <span>Cambiar imagen desde la computadora</span>
+          <input id="editImageFile" type="file" accept="image/*" />
+        </label>
+
+        <div class="dialog-actions">
+          <button id="deleteProduct" class="danger-btn" type="button">Ocultar producto</button>
+          <button class="primary-btn" value="save" type="submit">Guardar cambios</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="settingsDialog">
+      <form method="dialog" class="dialog-card" id="settingsForm">
+        <div class="drawer-head">
+          <div>
+            <p class="eyebrow">Configuracion</p>
+            <h2>Datos de venta</h2>
+          </div>
+          <button class="icon-btn close-dialog" type="button" aria-label="Cerrar">x</button>
+        </div>
+        <label class="field">
+          <span>WhatsApp del vendedor con codigo de pais</span>
+          <input id="sellerPhone" type="tel" placeholder="Ejemplo: 50688888888" />
+        </label>
+        <label class="field">
+          <span>Numero SINPE Movil</span>
+          <input id="sinpePhone" type="tel" placeholder="Ejemplo: 88888888" />
+        </label>
+        <label class="field">
+          <span>Nombre para SINPE</span>
+          <input id="sinpeName" type="text" placeholder="Nombre de la persona o negocio" />
+        </label>
+        <p class="hint">Se guarda solo en este navegador. Puedes cambiarlo cuando quieras.</p>
+        <button class="primary-btn" value="save" type="submit">Guardar datos</button>
+      </form>
+    </dialog>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="data/products.js?v=20260428-sinpe"></script>
+    <script src="app.js?v=20260507-colores-detalle"></script>
+  </body>
+</html>
