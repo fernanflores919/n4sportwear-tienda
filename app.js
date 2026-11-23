@@ -5,7 +5,7 @@ const currency = new Intl.NumberFormat("es-CR", {
 });
 
 const shippingFee = 3000;
-const catalogVersion = "2026-05-07-colores-detalle";
+const catalogVersion = "2026-11-23-actualizacion-n4";
 const isAdmin = new URLSearchParams(window.location.search).get("admin") === "1";
 const sellerPhone = "50660760919";
 const sinpePhone = "72592308";
