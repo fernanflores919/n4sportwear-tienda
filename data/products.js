@@ -288,49 +288,16 @@ window.INITIAL_PRODUCTS = [
     "wholesalePrice": 11990
   },
   {
-    "id": "enterizos-y-short-enaguas-10-enterizo-short-noa",
-    "name": "Enterizo Short Noa",
+    "id": "enterizos-y-short-enaguas-11-short-enagua-traslape",
+    "name": "Short Enagua Traslape",
     "category": "Enterizos y short enaguas",
-    "price": 19500,
+    "price": 15000,
     "sizes": [
       "XS",
       "S",
       "M",
       "L",
       "XL"
-    ],
-    "colors": [
-      "Negro",
-      "Azul oscuro",
-      "Musgo",
-      "Cafe",
-      "Gasolina",
-      "Fucsia",
-      "Blanco",
-      "Rey",
-      "Magenta",
-      "Rojo oscuro",
-      "Manzana"
-    ],
-    "image": "assets/products/enterizos-y-short-enaguas-10-enterizo-short-noa.jpg",
-    "source": "Enterizos y short enaguas 25.pdf",
-    "page": 11,
-    "design": "Enterizos cortos",
-    "sortOrder": 2009,
-    "wholesalePrice": 14500
-  },
-  {
-    "id": "enterizos-y-short-enaguas-11-short-enagua-traslape",
-    "name": "Short Enagua Traslape",
-    "category": "Enterizos y short enaguas",
-    "price": 13990,
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
     ],
     "colors": [
       "Negro",
@@ -356,14 +323,13 @@ window.INITIAL_PRODUCTS = [
     "id": "enterizos-y-short-enaguas-12-short-enagua-traslape2",
     "name": "Short Enagua Traslape2",
     "category": "Enterizos y short enaguas",
-    "price": 13990,
+    "price": 15000,
     "sizes": [
       "XS",
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -389,14 +355,13 @@ window.INITIAL_PRODUCTS = [
     "id": "enterizos-y-short-enaguas-13-short-enagua-tennis",
     "name": "Short Enagua Tennis",
     "category": "Enterizos y short enaguas",
-    "price": 13990,
+    "price": 15000,
     "sizes": [
       "XS",
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -422,14 +387,13 @@ window.INITIAL_PRODUCTS = [
     "id": "enterizos-y-short-enaguas-14-short-enagua-con-bolsa",
     "name": "Short Enagua Con Bolsa",
     "category": "Enterizos y short enaguas",
-    "price": 13990,
+    "price": 15000,
     "sizes": [
       "XS",
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -455,14 +419,13 @@ window.INITIAL_PRODUCTS = [
     "id": "enterizos-y-short-enaguas-15-short-enagua-aura",
     "name": "Short Enagua Aura",
     "category": "Enterizos y short enaguas",
-    "price": 14990,
+    "price": 15000,
     "sizes": [
       "XS",
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -590,8 +553,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -623,8 +585,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -656,8 +617,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -689,8 +649,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -722,8 +681,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -755,8 +713,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -788,8 +745,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -821,8 +777,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -854,8 +809,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -887,8 +841,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -920,8 +873,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -953,8 +905,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -986,8 +937,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1019,8 +969,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1052,8 +1001,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1085,8 +1033,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1118,8 +1065,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1151,8 +1097,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1184,8 +1129,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1217,8 +1161,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1250,8 +1193,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1283,8 +1225,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1316,8 +1257,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1349,8 +1289,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1382,8 +1321,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1415,8 +1353,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1439,39 +1376,6 @@ window.INITIAL_PRODUCTS = [
     "wholesalePrice": 5900
   },
   {
-    "id": "tops-y-blusas-09-blusa-basica-manga-corta",
-    "name": "Blusa Básica Manga Corta",
-    "category": "Tops y blusas",
-    "price": 8500,
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "colors": [
-      "Negro",
-      "Azul oscuro",
-      "Musgo",
-      "Cafe",
-      "Gasolina",
-      "Fucsia",
-      "Blanco",
-      "Rey",
-      "Magenta",
-      "Rojo oscuro",
-      "Manzana"
-    ],
-    "image": "assets/products/tops-y-blusas-09-blusa-basica-manga-corta.jpg",
-    "source": "TOP BLUSAS 25.pdf",
-    "page": 10,
-    "design": "Blusas",
-    "sortOrder": 8044,
-    "wholesalePrice": 6500
-  },
-  {
     "id": "tops-y-blusas-10-blusa-basica-manga-larga",
     "name": "Blusa Básica Manga Larga",
     "category": "Tops y blusas",
@@ -1481,8 +1385,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1514,8 +1417,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1547,8 +1449,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1580,8 +1481,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
@@ -1613,8 +1513,7 @@ window.INITIAL_PRODUCTS = [
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "colors": [
       "Negro",
